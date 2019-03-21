@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+    <hr>
     <ul class="menu">
         <li>
             <a href="{{ url("/workers/management") }}"
@@ -40,7 +41,10 @@
                 <a href="{{ url("/worker/{$worker->slug}") }}">
                     {{ $worker->name }}
                 </a>
+                <br>
+                {{ $worker->position }}
             </li>
+            <br>
         @empty
             <p>No workers</p>
         @endforelse

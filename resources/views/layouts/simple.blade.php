@@ -43,6 +43,11 @@
             width: 10px;
         }
         .text-center { text-align: center; }
+        .pagination { text-align: center; }
+        .pagination li {
+            display: inline-block;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
@@ -93,8 +98,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url("/Vacancies") }}"
-                        class="{{ url()->current() == url("/Vacancies") ? 'current' : ''}}">
+                    <a href="{{ url("/vacancies") }}"
+                        class="{{ url()->current() == url("/vacancies") ? 'current' : ''}}">
                         Vacancies
                     </a>
                 </li>

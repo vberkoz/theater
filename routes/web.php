@@ -21,6 +21,12 @@ Route::get('/spectacle/{slug}', 'SpectacleController@show');
 
 Route::redirect('/', '/repertoire/general');
 
+Route::get('/blog', 'PostController@index');
+Route::get('/post/{slug}', 'PostController@show');
+
+Route::get('/vacancies', 'VacancyController@index');
+Route::get('/vacancy/{slug}', 'VacancyController@show');
+
 
 
 Auth::routes();

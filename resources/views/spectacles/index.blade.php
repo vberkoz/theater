@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+    <hr>
     <ul class="menu">
         <li>
             <a href="{{ url("/repertoire/general") }}"
@@ -21,8 +22,11 @@
             <li>
                 <a href="{{ url("/spectacle/{$spectacle->slug}") }}">
                     {{ $spectacle->title }}
-                </a>
+                </a><br>
+                {{ $spectacle->type }}<br>
+                {{ $spectacle->author }} - {{ $spectacle->duration }}
             </li>
+            <br>
         @empty
             <p>No spectacles</p>
         @endforelse

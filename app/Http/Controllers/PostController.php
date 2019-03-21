@@ -2,22 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Spectacle;
+use App\Post;
 use Illuminate\Http\Request;
 
-class SpectacleController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @param   string  $category
-     * @return  \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response
      */
-    public function index($category)
+    public function index()
     {
-        $spectacles = Spectacle::where('category', $category)->get();
+        $posts = Post::paginate(10);
 
-        return view('spectacles.index', ['spectacles' => $spectacles]);
+        return view('posts.index', ['posts' => $posts]);
     }
 
     /**
@@ -49,18 +48,18 @@ class SpectacleController extends Controller
      */
     public function show(String $slug)
     {
-        $spectacle = Spectacle::where('slug', $slug)->first();
+        $post = Post::where('slug', $slug)->first();
         
-        return view('spectacles.show', ['spectacle' => $spectacle]);
+        return view('posts.show', ['post' => $post]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Spectacle  $spectacle
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Spectacle $spectacle)
+    public function edit(Post $post)
     {
         //
     }
@@ -69,10 +68,10 @@ class SpectacleController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Spectacle  $spectacle
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Spectacle $spectacle)
+    public function update(Request $request, Post $post)
     {
         //
     }
@@ -80,10 +79,10 @@ class SpectacleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Spectacle  $spectacle
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Spectacle $spectacle)
+    public function destroy(Post $post)
     {
         //
     }
