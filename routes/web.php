@@ -13,13 +13,19 @@
 
 use Illuminate\Http\Request;
 
+Route::get('/theater/{aspect}', 'TheaterController@theater');
+Route::get('/festival', 'TheaterController@festival');
+Route::get('/studio', 'TheaterController@studio');
+
 Route::get('/workers/{department}', 'WorkerController@index');
 Route::get('/worker/{slug}', 'WorkerController@show');
+
+Route::get('/affiches/{month}', 'AfficheController@index');
 
 Route::get('/repertoire/{category}', 'SpectacleController@index');
 Route::get('/spectacle/{slug}', 'SpectacleController@show');
 
-Route::redirect('/', '/repertoire/general');
+Route::redirect('/', '/blog');
 
 Route::get('/blog', 'PostController@index');
 Route::get('/post/{slug}', 'PostController@show');
@@ -27,6 +33,8 @@ Route::get('/post/{slug}', 'PostController@show');
 Route::get('/vacancies', 'VacancyController@index');
 Route::get('/vacancy/{slug}', 'VacancyController@show');
 
+Route::get('/contact', 'MailController@create');
+Route::post('/contact/store', 'MailController@store');
 
 
 Auth::routes();

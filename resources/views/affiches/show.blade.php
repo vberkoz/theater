@@ -18,12 +18,5 @@
             </a>
         </div>
     @endforeach
-
-    <h3 class="text-center">Schedule</h3>
-    <div class="text-center">
-        @foreach ($spectacle->affiches as $affiche)
-            <div>{{ $affiche->starts_at }}</div>
-        @endforeach
-    </div>
 </div>
 @endsection
