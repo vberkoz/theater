@@ -39,7 +39,7 @@ Route::post('/contact/store', 'MailController@store');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'HomeController@index');
 
 Route::get('/submit', function () {
     return view('submit');

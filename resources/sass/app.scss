@@ -1,14 +1,77 @@
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+// // Fonts
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-// Variables
-@import 'variables';
+// // Variables
+// @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// // Bootstrap
+// @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+// .navbar-laravel {
+//   background-color: #fff;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+// }
+
+body {
+  font-family: sans-serif;
+  margin: 5px;
 }
+
+.menu {
+  column-count: 2;
+}
+
+ul.menu li { padding: 10px; }
+
+img { width: 100%; }
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:visited { color: blue; }
+a.current { text-decoration: underline; }
+
+.container {
+  margin: 0 auto;
+  width: 310px;
+}
+
+.left, .right {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  width: 145px;
+}
+
+.left { text-align: right; }
+.right { text-align: left; }
+
+.dash {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  font-size: 14px;
+  width: 10px;
+}
+
+.text-center { text-align: center; }
+.pagination { text-align: center; }
+.pagination li {
+  display: inline-block;
+  padding: 10px;
+}
+
+form { padding: 5px; }
+
+input[type="email"], input[type="submit"], textarea {
+  width: 280px;
+  margin-bottom: 10px;
+  /* border: 1px gray solid; */
+  resize: none;
+  padding: 10px;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+input[type="email"] { width: 278px; }
+input[type="submit"] { width: 302px; }
